@@ -4,6 +4,8 @@ const emailSend = require("../utils/SendEmail")
 const generator = require('generate-password');
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
+
+
 const registration=async(req , res)=>{
     const {firstName,laststName,Number,address,city,email} = req.body;
 
@@ -77,15 +79,16 @@ const registration=async(req , res)=>{
     
     // console.log("mail sended");
 
-        res.status(200).send({msg:"User registered successfully, password sent to email"})
+        res.send({msg:"User registered successfully, password sent to email"})
     } catch (error) {
         res.status(400).send("Server error")
     }
-    
-    
-
-    
+     
 }
+
+
+
+
 
 const Coustomerlogin = async(req,res)=>{
     const { email, password } = req.body;
@@ -143,6 +146,9 @@ const ResetPassword=async(req,res)=>{
 
         if(!(NewPassword == ReEnterPassword) ){
             return res.status(400).send({msg:"both new password are not same please check"})
+        }
+        if (NewPassword.length < 6 || NewPassword.length > 12) {
+            return res.status(400).send({ msg: "Length should be at least 6 and at most 12" });
         }
         // console.log("password checked")
         const salt = await bcrypt.genSalt(10);

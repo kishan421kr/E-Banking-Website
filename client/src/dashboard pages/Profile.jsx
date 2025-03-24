@@ -12,7 +12,7 @@ const Profile=()=>{
         const api = `${DB_URL}/customer/profile`
         try {
             const response = await axios.post(api,{customerid:localStorage.getItem("customerId")});
-            console.log(response);
+            // console.log(response);
             setProfile(response.data)
         } catch (error) {
             console.log(error.response.data.msg)
