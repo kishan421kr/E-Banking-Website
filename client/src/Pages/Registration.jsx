@@ -35,7 +35,7 @@ const handelSubmit=async()=>{
 
         <>
         <div id="formMainDiv">
-            <div>
+            <div id="formsecondDiv">
                 <h2 id="headingtwo">Registration</h2>
        
                 <div id="formdiv">

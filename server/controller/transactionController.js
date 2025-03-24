@@ -34,7 +34,7 @@ const DepositeCash=async(req,res)=>{
 const WithdrawCash=async(req, res)=>{
     const{customerid,withdrawamount,commment,transactiontype,gmail}=req.body;
     
-    if(withdrawamount<0 || withdrawamount>3000){
+    if(withdrawamount<0 || withdrawamount>30000){
         return res.status(400).send({msg:"Transaction limit 30000"})
     }
 
