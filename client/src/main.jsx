@@ -5,6 +5,8 @@ import "./Css/style.css"
 import "./Css/dashborad.css"
 import "./Css/resetpassword.css"
 import "./Css/withdraw.css"
+import "./Css/animation.css"
+import "./Css/profileCard.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import App from './App.jsx'

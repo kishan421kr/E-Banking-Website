@@ -41,10 +41,10 @@ const DepositeCash=()=>{
                             <label for="name">Amount</label>
                             </div>
                     
-                        <div className="group">
+                        {/* <div className="group">
                             <textarea placeholder="" id="comment" name="commment" rows="5" onChange={handelInput}></textarea>
                             <label for="comment">Comment</label>
-                        </div>
+                        </div> */}
                             <button onClick={handelSubmit}>Deposite</button>
                         </form>
                     </div>

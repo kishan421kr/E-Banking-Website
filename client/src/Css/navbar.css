@@ -2,7 +2,7 @@
 #maindiv{
     display: flex;
     justify-content: space-between;
-    background-color: #556B2F;
+     background: linear-gradient(to right,rgb(137, 104, 255),rgb(175, 152, 255));;
     align-items: center;
     color: #F8F9FA;
     flex-wrap: wrap;
@@ -22,7 +22,7 @@
     transition: 0.3s ease;
 }
 #navbarlink:hover{
-    background-color: #6b873b ;
+    background-color: #714aff ;
     color: #F8F9FA;
 }
 

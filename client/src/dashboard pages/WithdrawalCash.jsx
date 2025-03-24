@@ -12,7 +12,7 @@ const WithdrawalCash=()=>{
         let value = e.target.value;
         let name = e.target.name;
         setInput(values=>({...values,[name]:value}))
-        console.log(input)
+        // console.log(input)
     }
 
     const handelSubmit=async(e)=>{

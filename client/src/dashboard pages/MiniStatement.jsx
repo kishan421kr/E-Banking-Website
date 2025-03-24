@@ -31,6 +31,7 @@ const MiniStatement=()=>{
                         <tr>
                             <th>Sr.No</th>
                             <th>Date</th>
+                            <th>Description</th>
                             <th>Debit/credit</th>
                             <th>Amount</th>
                         </tr>
@@ -43,6 +44,7 @@ const MiniStatement=()=>{
                                             <tr>
                                                 <td>{Sr}</td>
                                                 <td>{key.transactionAt}</td>
+                                                {key.transactionType == 'debit' ? <td>{key.Comment}</td> :<td>Add Cash</td> }
                                                 { key.transactionType == 'credit' ? <td style={{color:"green"}}>{key.transactionType}</td> :<td style={{color:"red"}}>{key.transactionType}</td>  }
                                                 {key.transactionType == 'credit' ? <td style={{color:"green"}}>{key.Amount}</td> :<td style={{color:"red"}}>{key.Amount}</td>}
                                             </tr>

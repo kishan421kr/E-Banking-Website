@@ -21,10 +21,11 @@ const handelSubmit=async()=>{
     try {
         const response = await axios.post(api,input);
         console.log(response.data);
+        alert(response.data.msg)
         toast.success(response.data.msg);
         navigate("/login");
     } catch (error) {
-        console.log("data base not found");
+        // console.log("data base not found");
         toast.error(error.response.data.msg);
     }
     
@@ -69,6 +70,8 @@ const handelSubmit=async()=>{
                 </div>
                 <ToastContainer position="top-right" autoClose={3000} />
             </div>
+           
+                
         </div>
         </>
     )

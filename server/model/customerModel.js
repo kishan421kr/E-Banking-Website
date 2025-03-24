@@ -31,6 +31,14 @@ const CoustomerSchema = new mongoose.Schema({
         type:String,
         require:true
     },
+    AccountNumber:{
+        type:String,
+        require:true
+    },
+    IFSCnumber:{
+        type:String,
+        require:true
+    },
     createAt:{
         type:Date,
         default:Date.now

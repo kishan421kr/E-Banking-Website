@@ -6,5 +6,5 @@ route.post("/registration",customerController.registration);
 route.post("/login",customerController.Coustomerlogin);
 route.post("/authentication",customerController.Authentication)
 route.post("/resetPassword",customerController.ResetPassword)
-
+route.post("/profile",customerController.Profile)
 module.exports = route; 

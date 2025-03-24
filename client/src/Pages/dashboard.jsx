@@ -33,8 +33,9 @@ const Dashboard=()=>{
         <>
             <h1 id="dashHeading" >Welcome to Dashboard </h1>
             <div id="displayBar">
-                <div>Name : {localStorage.getItem("name")}</div>
-                <div>Email : {localStorage.getItem("email")}</div>
+                <div><span style={{fontSize:"20px", marginRight:"5px"}}>Welcome</span> <strong style={{textDecoration:"underline"}}>{localStorage.getItem("name")}</strong></div>
+                {/* <div>Email : {localStorage.getItem("email")}</div> */}
+
                 <div id="DashLogoutBtn" onClick={handelLogout}><AiOutlineLogout /> Logout</div>
             </div>
             

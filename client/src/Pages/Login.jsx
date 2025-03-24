@@ -30,7 +30,7 @@ const Login=()=>{
                     localStorage.setItem("email",response.data.email)
                     localStorage.setItem("customerId",response.data.customerid)
                     localStorage.setItem("token",response.data.token)
-                    // toast.success(response.data.msg)
+                    toast.success(response.data.msg)
                     toast.success("login successfull");
                     navigate("/dashboard");
         

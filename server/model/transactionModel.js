@@ -12,6 +12,10 @@ const transactionSchema = new mongoose.Schema({
     transactionType:{
         type:String,
         require:true
+    },
+    Comment:{
+        type:String,
+        default:"Widhdraw Cash"
     }
     ,
     transactionAt:{

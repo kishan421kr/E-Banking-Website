@@ -7,25 +7,57 @@ const bcrypt = require("bcrypt");
 const registration=async(req , res)=>{
     const {firstName,laststName,Number,address,city,email} = req.body;
 
+    const verifyEmail = await customerModel.findOne({Email:email})
+
+    if(verifyEmail){
+       return res.status(400).send({msg:"Email Already Registered"});
+    }
+
     const password = generator.generate({
         length: 8,
         numbers: true
     });
+
+    const accountNumber = await generator.generate({
+        length: 12,
+        numbers: true,
+        lowercase: false,
+        uppercase: false,
+        symbols: false,
+        excludeSimilarCharacters: true, // Avoids characters that look similar
+    });
+
+    
+    const RandomIFSC = await generator.generate({
+        length: 4,
+        numbers: true,
+        lowercase: false,
+        uppercase: false,
+        symbols: false,
+        excludeSimilarCharacters: true,
+    })
+
+    const fixedIFSC = "EBK0";
+
+    const IFSC = fixedIFSC + RandomIFSC;
     
        
     // console.log("password generated");
     const salt = await bcrypt.genSalt(10);
     const hashPassword = await bcrypt.hash(password,salt)
        
+
     try {
-        const register = customerModel.create({
+            await customerModel.create({
             FirstName :firstName,
             LastName:laststName,
             Number:Number,
             Address:address,
             City:city,
             Email:email,
-            Password:hashPassword
+            Password:hashPassword,
+            AccountNumber:accountNumber,
+            IFSCnumber:IFSC
         })
     // console.log("data save in data base" );
     
@@ -102,9 +134,9 @@ const ResetPassword=async(req,res)=>{
     
     try {
         const data = await customerModel.findOne({_id:customerid});
-        console.log(data.Password)
+        // console.log(data.Password)
         const checkPassword = await bcrypt.compare(oldPassword,data.Password);
-        console.log(checkPassword)
+        // console.log(checkPassword)
         if(!(checkPassword)){
             return res.status(400).send({msg:"old password does't match"})
         }
@@ -112,10 +144,10 @@ const ResetPassword=async(req,res)=>{
         if(!(NewPassword == ReEnterPassword) ){
             return res.status(400).send({msg:"both new password are not same please check"})
         }
-        console.log("password checked")
+        // console.log("password checked")
         const salt = await bcrypt.genSalt(10);
         const hashPassword = await bcrypt.hash(NewPassword,salt);
-        console.log("password hashed");
+        // console.log("password hashed");
         await customerModel.findByIdAndUpdate({_id:customerid},{Password:hashPassword})
         // res.status(200).send({msg:"Password change succesfully done!!"});
 
@@ -132,7 +164,7 @@ const ResetPassword=async(req,res)=>{
             return res.status(500).send({ msg: "Failed to send email" });
         }
     
-    console.log("mail sended");
+    // console.log("mail sended");
 
         res.status(200).send({msg:"Password change succesfully done!!"})
 
@@ -144,9 +176,26 @@ const ResetPassword=async(req,res)=>{
 
 }
 
+const Profile=async(req,res)=>{
+    const {customerid} = req.body;
+    try {
+        const data =  await customerModel.findOne({_id:customerid}).select("-Password")
+    // console.log(data);
+    if (!data) {
+        return res.status(404).json({ msg: "User not found" });
+    }
+    res.status(200).json(data);
+    } catch (error) {
+        res.status(500).send({ msg: "Server error" });
+    }
+    
+    
+}
+
 module.exports={
     registration,
     Coustomerlogin,
     Authentication,
-    ResetPassword
+    ResetPassword,
+    Profile
 }

@@ -11,7 +11,7 @@ import WithdrawalCash from "./dashboard pages/WithdrawalCash"
 import MiniStatement from "./dashboard pages/MiniStatement"
 import Profile from "./dashboard pages/Profile"
 import ResetPassword from "./dashboard pages/ResetPassword"
-
+import { ToastContainer } from "react-toastify";
 
 
 const App=()=>{
@@ -41,6 +41,7 @@ const App=()=>{
         </Routes>
       
       </BrowserRouter>
+      <ToastContainer position="top-right" autoClose={3000} />
     
     </>
   )
