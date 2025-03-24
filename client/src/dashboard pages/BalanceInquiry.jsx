@@ -41,7 +41,7 @@ const BalanceInquiry=()=>{
             <h2 id="dashHeading2">Balance inquiry</h2>
 
             <div>
-                NetBalance : {netBalance} 
+                ₹ NetBalance : {netBalance} 
             </div>
         </div>
             

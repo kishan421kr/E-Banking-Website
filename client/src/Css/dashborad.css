@@ -98,6 +98,10 @@
     text-align: center;
 
 }
+#balanceMainDiv div{
+    font-size: 22px;
+    font-weight: 700;
+}
 #dashHeading2{
     padding: 10px;
     margin-bottom: 10px;
