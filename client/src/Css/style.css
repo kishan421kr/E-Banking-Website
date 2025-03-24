@@ -1,0 +1,96 @@
+
+#formdiv{
+    width: auto;
+    margin: auto;
+    font-size: 17px;
+}
+#formMainDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+}
+
+#headingtwo{
+    text-align: center;
+    color: #E1B12C;
+    font-weight: 700;
+    font-size: 26px;
+}
+#loginInput{
+    height: 31px;
+    width: 220px;
+    margin: 10px 0px;
+    border: 1px solid rgb(75, 75, 75);
+    border-radius: 5px;
+    transition: 0.1s ease;
+}
+#loginInput:hover{
+    border:2px solid #556B2F;
+}
+
+#loginformtoRegisterlink{
+    color: #4e807b;
+    text-decoration: none;
+}
+#loginformtoRegisterlink:hover{
+    
+    color: rgba(0, 0, 255, 0.852);
+}
+
+
+#inputlabel{
+    margin-top: 5px;
+}
+#loginsubmitbtn{
+    width: 80px;
+    height: 25px;
+    margin: auto;
+    background-color: #E1B12C;
+    color: rgb(75, 75, 75);
+    border: none;
+}
+#loginsubmitbtn:hover{
+    
+    border: 1px solid black;
+}
+
+
+
+
+
+
+
+#footerbottom{
+    background-color: #556B2F;
+    color: #F8F9FA;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#loginmainDiv{
+    background-image: url("Login bg img.jpg");
+    background-size: cover;  
+    background-position: center; 
+    background-repeat: no-repeat; 
+    width: 100vw; 
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#loginSecondDiv{
+    background-color: #F8F9FA;
+    box-shadow:0px 3px 10px 1px #00000047;
+    padding: 40px;
+    border-radius: 10px;
+}
+#minMainDiv{
+    background-color: #F8F9FA;
+    box-shadow:0px 3px 10px 1px #00000047;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+}

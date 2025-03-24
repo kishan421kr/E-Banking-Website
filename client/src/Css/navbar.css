@@ -1,0 +1,35 @@
+
+#maindiv{
+    display: flex;
+    justify-content: space-between;
+    background-color: #556B2F;
+    align-items: center;
+    color: #F8F9FA;
+    flex-wrap: wrap;
+    padding: 10px 100px;
+}
+
+#navbararticle{
+    display: flex;
+    /* gap: 5px; */
+}
+
+#navbarlink{
+    text-decoration: none;
+    color: #F8F9FA;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+#navbarlink:hover{
+    background-color: #6b873b ;
+    color: #F8F9FA;
+}
+
+#searchbar {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
