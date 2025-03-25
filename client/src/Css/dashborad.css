@@ -15,6 +15,20 @@
     /* border-bottom:1px solid black ; */
     align-items: center;
 }
+
+@media(max-width:426px){
+    #displayBar{
+        display: flex;
+        justify-content:space-around;
+        gap: 10px;
+        
+        padding: 10px 30px;
+        
+    }
+}
+
+
+
 #dashHeading{
     text-align: center;
     background-color: #ffffff;
@@ -67,6 +81,8 @@
     top: 2px;
 }
 
+
+
 #dashMid{
     display: flex;
     flex-wrap: wrap;
@@ -91,7 +107,38 @@
     
 }
 
+#mNavBar{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(115deg,rgb(175, 152, 255),rgb(137, 104, 255));;
+    color: #F8F9FA;
+    text-align: center;
+    padding: 10px 0px;
+    margin-bottom: 20px;
+}
+#MFirstNav{
+    display: flex;
+}
+#MSectNav{
+    display: flex;
+}
 
+    #mStylelink {
+        background-color: white;
+        box-shadow: 2px 3px 10px 1px #0000008a;
+        border-radius: 6px;
+        margin: 5px;
+        padding: 6px;
+        font-size: 14px;
+        cursor: pointer;
+        text-align: center;
+    }
+
+@media (max-width:426px){
+    
+}
 
 #balanceMainDiv{
     background-color: #fff;
