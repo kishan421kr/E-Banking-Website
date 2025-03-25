@@ -8,8 +8,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 95vh;
+    height: fit-content;
+    padding: 50px;
 }
+
+#formsecondDiv{
+    background-color: #F8F9FA;
+    box-shadow:0px 3px 10px 1px #00000047;
+    padding: 40px;
+    border-radius: 10px;
+}
+
 
 #headingtwo{
     text-align: center;
@@ -42,6 +51,45 @@
 #inputlabel{
     margin-top: 5px;
 }
+
+
+@media(max-width:426px){
+    #formMainDiv {
+        padding: 20px;
+    }
+    #formdiv{
+        font-size: 16px;
+    }
+    #headingtwo{
+        font-weight: 700;
+        font-size: 20px;
+    }
+    #formsecondDiv{
+        padding: 20px;
+        
+    }
+    #loginInput {
+        height: 30px;
+        width: 180px;
+        margin: 5px 0px;
+    }
+    #inputlabel {
+        margin-top: 1px;
+        font-size: 14px;
+    }
+    span{
+        font-size: 14px;
+    }
+    #loginsubmitbtn {
+        width: 74px;
+        height: 22px;
+        font-size: 14px;
+    }
+}
+
+
+
+
 #loginsubmitbtn{
     width: 80px;
     height: 25px;
@@ -68,14 +116,15 @@
     background-size: cover;  
     background-position: center; 
     background-repeat: no-repeat; 
-    width: 100vw; 
-    height: 100vh;
+    width: 100%; 
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    padding: 100px 50px;
 }
 #loginSecondDiv{
+    
     background-color: #F8F9FA;
     box-shadow:0px 3px 10px 1px #00000047;
     padding: 40px;
@@ -83,12 +132,6 @@
 }
 
 
-#formsecondDiv{
-    background-color: #F8F9FA;
-    box-shadow:0px 3px 10px 1px #00000047;
-    padding: 40px;
-    border-radius: 10px;
-}
 
 
 #minMainDiv{
@@ -172,6 +215,42 @@ footer {
     font-size: 18px;
 }
 
+@media (max-width:769px){
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1000px;
+        margin: auto;
+        padding: 0 20px;
+    }
+    .footer-section {
+        flex: 1;
+        margin: 10px;
+        min-width: 210px;
+    }
+    .footer-section p {
+    color: #ccc;
+    font-size: 13px;
+    text-decoration: none;
+    margin-bottom: 5px;
+    display: block;
+}
+}
+
+@media (max-width:580px){
+    .footer-section {
+        flex: 1;
+        margin: 10px;
+        min-width: 155px;
+        font-size: 16px;
+    }
+    .footer-logo {
+        width: 125px;
+        margin-bottom: 10px;
+    }
+}
+
 /* .social-media a:hover {
     color: rgb(255, 204, 0);
 } */
@@ -208,4 +287,14 @@ h2 {
 p {
     font-size: 18px;
     line-height: 1.6;
+}
+@media (max-width:426px){
+    h2 {
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+    p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
 }

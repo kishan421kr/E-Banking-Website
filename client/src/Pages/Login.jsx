@@ -51,7 +51,7 @@ const Login=()=>{
                     <input id="loginInput" type="text" name="email" value={input.email} onChange={handelInput} />
                     
                     <br />
-                    <label >Password</label><br />
+                    <label id="inputlabel" >Password</label><br />
                     <input id="loginInput" type="password" name="password" value={input.password} onChange={handelInput} />
 
                     <br />

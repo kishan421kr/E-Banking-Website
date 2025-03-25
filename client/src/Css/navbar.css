@@ -2,16 +2,61 @@
 #maindiv{
     display: flex;
     justify-content: space-between;
-     background: linear-gradient(to right,rgb(137, 104, 255),rgb(175, 152, 255));;
+     background: linear-gradient(to right,rgb(137, 104, 255),rgb(175, 152, 255));
     align-items: center;
     color: #F8F9FA;
     flex-wrap: wrap;
     padding: 10px 100px;
 }
 
+#hamburger{
+    display: none;
+    box-shadow: -1px 2px 6px 1px #00000069;
+    border-radius: 6px;
+    background-color: #F8F9FA;
+    color: #714aff;
+    cursor: pointer;
+    padding: 0px 10px;
+    
+}
+#hamburger:hover{
+    background-color: #714aff;
+    color: #F8F9FA;
+}
 #navbararticle{
     display: flex;
     /* gap: 5px; */
+}
+#sidebar{
+    display: none;
+    
+    
+}
+#Sidenavbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    right: 0px;
+    /* top: 0px; */
+    background: linear-gradient(to right,rgb(157, 131, 249),rgb(137, 104, 255));
+    width: 45%;
+    text-align: center;
+    height: 45%;
+    padding: 125px 40px;
+    transition: 1s ease;
+}
+#sidenavbarlink{
+    text-decoration: none;
+    color: #F8F9FA;
+    padding: 10px 10px;
+    border-radius: 20px;
+    transition: 0.3s ease;
+   
+}
+#sidenavbarlink:hover{
+    background-color: #714aff ;
+    color: #F8F9FA;
 }
 
 #navbarlink{
@@ -32,4 +77,56 @@
     border: none;
     outline: none;
     font-size: 16px;
+}
+
+@media (max-width:769px){
+    #maindiv{
+        padding: 10px 50px;
+    }
+    #navbarlink{
+        text-decoration: none;
+        color: #F8F9FA;
+        padding: 10px 15px;
+        border-radius: 20px;
+        transition: 0.3s ease;
+    }
+
+
+}
+@media (max-width:580px){
+    #maindiv{
+        padding: 10px 10px;
+        justify-content:space-between;
+        
+    }
+    #navbarlink{
+        text-decoration: none;
+        color: #F8F9FA;
+        padding: 10px 12px;
+        border-radius: 20px;
+        transition: 0.3s ease;
+    }
+    #logoarticle img{
+        width: 100px;
+        height: 22px;
+    }
+    #searchbar{
+        display: none;
+    }
+}
+@media (max-width:480px){
+    #navbararticle{
+        display: none;
+    }
+    #searchbar{
+        display: none;
+    }
+    #hamburger{
+        display: block;
+    }
+    
+        
+        
+    
+
 }

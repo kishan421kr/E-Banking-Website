@@ -35,8 +35,8 @@ const Home=()=>{
 
         <>  
              {/* <h1>Home Page</h1> */}
-             <div style={{width:"100%",height:"95vh", background:"overflow-hidden" }}>
-                <img src="home page img.jpg" alt="" width={"100%"} height={"100%"}/>
+             <div style={{width:"100%",height:"auto", background:"overflow-hidden" }}>
+                <img src="home page img.jpg" alt="" width={"100%"} height={"auto"}/>
              </div>
              <div id="description">
                 <div class="descriptioncontainer">
