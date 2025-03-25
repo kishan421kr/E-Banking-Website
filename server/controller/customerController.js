@@ -3,7 +3,7 @@ const customerModel = require("../model/customerModel");
 const emailSend = require("../utils/SendEmail")
 const generator = require('generate-password');
 const jwt = require("jsonwebtoken");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 
 
 const registration=async(req , res)=>{
