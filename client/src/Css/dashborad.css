@@ -228,12 +228,23 @@
     gap: 10px;
 }
 
-@media(max-width:426px){
+@media (max-width:356px){
+    #depositeMainDiv {
+      padding: 10px;
+  }
    
-}
+  }
 #withdrawMainDiv{
     background-color: #fff;
     box-shadow:0px 3px 10px 1px #00000047;
     padding: 40px;
     text-align: center;
+}
+@media(max-width:356px){
+    #withdrawMainDiv {
+        
+        padding: 10px;
+    }
+    
+    
 }

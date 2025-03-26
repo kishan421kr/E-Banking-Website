@@ -9,11 +9,18 @@
   }
 
   @media (max-width:426px){
-    /* .card{
+    .card{
       padding: 20px;
     width: 310px;
-    } */
+    }
     
+  }
+  @media (max-width:356px){
+   
+    .card{
+      padding: 20px;
+    width: 300px;
+    }
   }
   
   .title {
