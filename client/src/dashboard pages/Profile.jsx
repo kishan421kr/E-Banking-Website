@@ -27,15 +27,16 @@ const Profile=()=>{
 
     return(
         <>
-           <div id="profileMainDiv">
-                <div className="cookieCard">
-                <p className="cookieHeading">{profileData.FirstName } {profileData.LastName}</p>
-                <p className="cookieDescription">Account No. <strong>{profileData.AccountNumber}    </strong> IFSC No. <strong>{profileData.IFSCnumber}</strong></p>
-                <p className="cookieDescription">Mobile No. <strong>{profileData.Number}    </strong> Email : <strong>{profileData.Email}</strong></p>
-                <p className="cookieDescription">Address : <strong>{profileData.Address}    </strong> City : <strong>{profileData.City}</strong></p>
+            <div id="Mprofile">
+                <div id="profileMainDiv">
+                        <div className="cookieCard">
+                        <p className="cookieHeading">{profileData.FirstName } {profileData.LastName}</p>
+                        <p className="cookieDescription">Account No. <strong>{profileData.AccountNumber}    </strong> IFSC No. <strong>{profileData.IFSCnumber}</strong></p>
+                        <p className="cookieDescription">Mobile No. <strong>{profileData.Number}    </strong> Email : <strong>{profileData.Email}</strong></p>
+                        <p className="cookieDescription">Address : <strong>{profileData.Address}    </strong> City : <strong>{profileData.City}</strong></p>
+                        </div>
                 </div>
             </div>
-
 
         </>
     )

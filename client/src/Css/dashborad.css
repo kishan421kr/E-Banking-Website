@@ -106,6 +106,9 @@
     
     
 }
+#MobNavBar{
+    display: none;
+}
 
 #mNavBar{
     display: flex;
@@ -136,8 +139,59 @@
         text-align: center;
     }
 
+
+    #SMobNavBar{
+        display: none;
+    }
+    #SMdisplayBar{
+        
+            display: flex;
+            justify-content:space-around;
+            gap: 10px;
+            background: linear-gradient(to right,rgb(137, 104, 255),rgb(175, 152, 255));
+            color: #F8F9FA;
+            padding: 10px 30px;
+            
+        
+    }
+
 @media (max-width:426px){
-    
+    #dashMid{
+        display: none;
+    }
+    #MobNavBar{
+        display: block;
+    }
+}
+@media(max-width:396px){
+    #displayBar{
+        display: none;
+    }
+    #MobNavBar{
+        display: none;
+    }
+    #SMobNavBar{
+        display: block;
+    }
+    #SMdisplayBar{
+        display: block;
+        text-align: center;
+    }
+    #DashLogoutBtn{
+        /* border: 1px solid black; */
+        border: none;
+        padding: 5px 20px;
+        background-color: #F8F9FA;
+        color: #714aff;
+        cursor: pointer;
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        box-shadow: -1px 2px 6px 1px #00000069;
+        border-radius: 6px;
+        justify-content: center;
+    }
 }
 
 #balanceMainDiv{
@@ -151,15 +205,18 @@
     font-size: 22px;
     font-weight: 700;
 }
+#balanceMainDiv div{
+    color: green;
+    font-size: 18px;
+}
+
+
 #dashHeading2{
     padding: 10px;
     margin-bottom: 10px;
     color: #E1B12C;
 }
-#balanceMainDiv div{
-    color: green;
-    font-size: 18px;
-}
+
 
 #depositeMainDiv{
     background-color: #fff;
@@ -169,6 +226,10 @@
 }
 #depositeMainDiv div{
     gap: 10px;
+}
+
+@media(max-width:426px){
+   
 }
 #withdrawMainDiv{
     background-color: #fff;

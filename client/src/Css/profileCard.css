@@ -39,4 +39,14 @@
   
   
   
-  
+  @media(max-width:426px){
+    .cookieCard{
+      width: 20em;
+      height: 370px;
+    }
+    #Mprofile{
+      width: 100%;
+      height: auto;
+      margin: auto;
+    }
+  }
