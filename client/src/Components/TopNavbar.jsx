@@ -1,8 +1,10 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 
 const TopNav=()=>{
     const [isOpen ,setIsOpen] = useState(false);
+    
+    
     return(
 
         <>
@@ -23,11 +25,12 @@ const TopNav=()=>{
                 </div>
 
             </div>
+
             <div id="sidebar" style={{display:`${isOpen?"block":"none"}`}}>
                 <article id="Sidenavbar">
-                        <Link id="sidenavbarlink" to={"home"}>Home</Link>
-                        <Link id="sidenavbarlink" to={"registration"}>Registration</Link>
-                        <Link id="sidenavbarlink" to={"login"}>Login</Link>
+                        <Link id="sidenavbarlink" onClick={()=>setIsOpen(!isOpen)} to={"home"}>Home</Link>
+                        <Link id="sidenavbarlink" onClick={()=>setIsOpen(!isOpen)}to={"registration"}>Registration</Link>
+                        <Link id="sidenavbarlink" onClick={()=>setIsOpen(!isOpen)} to={"login"}>Login</Link>
                 </article>
             </div>
 

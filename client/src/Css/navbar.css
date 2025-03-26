@@ -102,7 +102,7 @@
     #navbarlink{
         text-decoration: none;
         color: #F8F9FA;
-        padding: 10px 12px;
+        padding: 10px 15px;
         border-radius: 20px;
         transition: 0.3s ease;
     }
@@ -115,6 +115,9 @@
     }
 }
 @media (max-width:480px){
+    #maindiv{
+        padding: 15px 10px;
+    }
     #navbararticle{
         display: none;
     }
