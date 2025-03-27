@@ -1,4 +1,6 @@
-
+*{
+    transition: 0.3s ease;
+}
 #maindiv{
     display: flex;
     justify-content: space-between;
